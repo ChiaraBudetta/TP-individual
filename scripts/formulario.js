@@ -1,6 +1,6 @@
 const form = document.getElementById('formulario-contacto');
 
-form.addEventListener('submit', (e)=>{
+form.addEventListener('submit', function(e){
     e.preventDefault();  
 
 
@@ -15,7 +15,7 @@ form.addEventListener('submit', (e)=>{
         return
     }
 
-    
+
     if(!mail.includes("@")){
         alert("Ingresa un correo electrónico valido")
         return
@@ -29,8 +29,6 @@ form.addEventListener('submit', (e)=>{
         alert("Dejanos acá tu mensaje")
         return
     }
-
-
 
 
 
@@ -55,3 +53,5 @@ function getContacto(){
     const contactoLocalStorage = JSON.parse(localStorage.getItem("contacto"))
     console.log("contacto recuperado del localstorage", contactoLocalStorage)
 }
+
+
